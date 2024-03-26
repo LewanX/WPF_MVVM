@@ -29,6 +29,7 @@ namespace WPF_Practice2.Model
         public Nullable<decimal> Price { get; set; }
         public string Category { get; set; }
         public string ImageUrl { get; set; }
+        public bool Active { get; set; }    
 
     }
 }
