@@ -8,7 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_Practice2.Model;
+//using WPF_Practice2.Model;
 
 namespace WPF_Practice2
 {
@@ -17,12 +17,13 @@ namespace WPF_Practice2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ProductViewModel vm = new ProductViewModel();
+        //public ProductViewModel vm = new ProductViewModel();
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = vm;
-            vm.LoadProducts();
+          
+            //DataContext = vm;
+            //vm.LoadProducts();
         }
     }
 }
