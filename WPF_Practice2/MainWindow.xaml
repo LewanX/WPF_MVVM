@@ -7,13 +7,14 @@
         xmlns:Model="clr-namespace:WPF_Practice2.Model" x:Class="WPF_Practice2.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-   
-        <Grid>
-            <DataGrid ItemsSource="{Binding Products}">
-             
-            </DataGrid>
-        </Grid>
+
+    <Grid>
+        <DataGrid ItemsSource="{Binding Products}">
+
+        </DataGrid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="212,149,0,0" VerticalAlignment="Top" Height="23" Width="96"/>
+    </Grid>
 
 
-    
+
 </Window>
