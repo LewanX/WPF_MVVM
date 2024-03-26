@@ -20,12 +20,16 @@ namespace WPF_Practice2.Services.Products
 
         public Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            const string queryString = "SELECT [Id], [Name], [Description], [Price], [Category], [ImageUrl], [Active] FROM dbo.Product";
+
+
+
+            return Task.FromResult(true);
         }
 
         public async Task<ObservableCollection<Product>> GetAllAsync()
         {
-            const string queryString = "SELECT [Id], [Name], [Description], [Price], [Category], [ImageUrl] FROM dbo.Product";
+            const string queryString = "SELECT [Id], [Name], [Description], [Price], [Category], [ImageUrl], [Active] FROM dbo.Product WHERE Active = 1";
 
             using (SqlConnection connection = new SqlConnection(DbConnectionString))
             {
@@ -48,6 +52,7 @@ namespace WPF_Practice2.Services.Products
                                 Price = reader.GetDecimal(3),
                                 Category = reader.GetString(4),
                                 ImageUrl = reader.GetString(5),
+                                Active = reader.GetBoolean(6)
                             };
 
                             products.Add(product);
