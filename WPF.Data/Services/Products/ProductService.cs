@@ -11,7 +11,7 @@ namespace WPF_Practice2.Services.Products
 {
     public class ProductService : IDataService<Product>
     {
-        private readonly string DbConnectionString = "Data Source=DESKTOP-5L3JTLB;Initial Catalog=ElAlmacén;Integrated Security=True;Pooling=False;Encrypt=False";
+        private readonly string DbConnectionString = "Data Source=DESKTOP-5L3JTLB;Initial Catalog=ElAlmacén;Integrated Security=True;Pooling=False";
 
         public Task<Product> Create(Product entity)
         {
